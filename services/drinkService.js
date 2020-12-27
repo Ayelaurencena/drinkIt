@@ -1,3 +1,4 @@
+const { Query } = require("mongoose");
 const Drink = require("./../models/drinkModel");
 
 //queremos conseguir el Main Ingredient, pero
@@ -8,9 +9,8 @@ const Drink = require("./../models/drinkModel");
 class DrinkService {
 
     async getDrinkByName(name) {
-        console.log(name, "name de drink service")
          const query = await Drink.findOne({ name: name}).exec();
-         console.log(query, "drink")
+        // Arroja null
          return query
 
     }
