@@ -1,4 +1,4 @@
-const { Query } = require("mongoose");
+//const { Query } = require("mongoose");
 const Drink = require("./../models/drinkModel");
 
 //queremos conseguir el Main Ingredient, pero
@@ -8,8 +8,8 @@ const Drink = require("./../models/drinkModel");
 
 class DrinkService {
 
-    async getDrinkByName(name) {
-         const query = await Drink.findOne({ name: name}).exec();
+     getDrinkByName(name) {
+         const query =  Drink.findOne({ name: name}).exec();
         // Arroja null
          return query
 

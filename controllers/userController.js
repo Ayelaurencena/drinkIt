@@ -7,7 +7,7 @@ class UserController {
     async getUserByName(req, res) {;
         const { name } = req.params;
         const user = await this.userService.getUserByName(name);
-        //console.log(user, "de bebida")
+        console.log(user, "usuario")
         const drink = await this.drinkService.getDrinkByName(user.favDrink)
         const data = {
             name: user.name,

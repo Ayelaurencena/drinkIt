@@ -3,9 +3,9 @@ const User = require("./../models/userModel");
 
 class UserService {
     
-    async getUserByName(name) {
+    getUserByName(name) {
 
-        const query = await User.findOne({ name: name }).exec();
+        const query = User.findOne({ name: name }).exec();
 // la query devuelve el user OK
         return query
     }
